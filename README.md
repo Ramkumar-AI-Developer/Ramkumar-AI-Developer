@@ -1,27 +1,44 @@
-<h1 align="center">Hi, I'm Ram Kumar</h1>
-<h3 align="center">Aspiring Data science and Machine Learning</h3>
+# Ram Kumar
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Ramkumar-AI-Developer&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Ramkumar-AI-Developer&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
-  <img src="https://streak-stats.demolab.com?user=Ramkumar-AI-Developer&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Ramkumar-AI-Developer&radius=16&theme=react&area=true&order=5" height="300" alt="activity-graph graph"  />
-</div>
+**AI/ML Engineer — LLM systems in production.**
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/ram-kumar-134378314" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="ram-kumar-134378314" height="30" width="40" /></a>
-<a href="https://kaggle.com/ramkumar4240" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="ramkumar4240" height="30" width="40" /></a>
-<a href="https://instagram.com/ram__4240" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="ram__4240" height="30" width="40" /></a>
-<a href="https://www.hackerrank.com/infogramrk" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="infogramrk" height="30" width="40" /></a>
-</p>
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://opencv.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> </p>
+I build and run LLM infrastructure for an enterprise GRC (governance, risk & compliance)
+platform at Cytrusst Intelligence in Bengaluru. Most of my work is inference serving,
+small-model fine-tuning, and making language models produce output that downstream
+systems can actually depend on.
 
--  I’m currently learning **Deep Learning**
+### What I work on
 
--  All of my projects are available at [https://Ramkumar-AI-Developer.github.io/My-portfolio/](https://Ramkumar-AI-Developer.github.io/My-portfolio/)
+**Self-hosted inference** — vLLM serving gpt-oss-20b (MXFP4 quantized) on A100 hardware,
+fronted by LiteLLM, consumed by Django services. Migrated production workloads off a
+hosted API provider.
 
--  Ask me about **Anything**
+**Small-model fine-tuning** — LoRA supervised fine-tuning on domain data curated from
+production logs. Lifted a core classification task from 11.8% to 88.2% held-out accuracy
+on Phi-4-mini.
 
--  How to reach me **infogramrk@gmail.com**
+**CPU-only deployment** — Phi-4-mini quantized to Q4_K_M via llama.cpp, so air-gapped
+customers can run inference without a GPU.
+
+**Structured output** — guided decoding for schema-guaranteed responses, backed by
+evaluation harnesses that measure whether a prompt change actually helped instead of
+assuming it did.
+
+**Retrieval** — hybrid search over OpenSearch (BM25 + kNN) with DynamoDB-backed
+session state.
+
+### Stack
+
+`Python` · `Django` · `PyTorch` · `Transformers` · `PEFT / LoRA` · `vLLM` · `LiteLLM` ·
+`llama.cpp` · `LangGraph` · `OpenSearch` · `DynamoDB` · `AWS` · `Docker`
+
+### About the repos here
+
+Most of my production work is closed-source. What's public below is earlier project
+work — I'm adding repositories that reflect my current stack.
+
+### Elsewhere
+
+[LinkedIn](https://www.linkedin.com/in/ramkumar-ai) ·
+[Kaggle](https://www.kaggle.com/ramkumar4240) ·
+ramkumar.ai.contact@gmail.com
